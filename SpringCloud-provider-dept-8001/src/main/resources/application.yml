@@ -1,0 +1,32 @@
+server:
+  port: 8001
+#mybatis 配置
+mybatis:
+  type-aliases-package: com.jjle.pojo
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  config-location: classpath:mybatis/mybatis-config.xml
+
+#spring的配置
+spring:
+  application:
+    name: SpringCloud-provider-dept
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://139.224.216.12:3306/SpringCloud01?autoReconnect=true&useUnicode=true&createDatabaseIfNotExist=true&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 1234
+
+
+#Eureka的配置 服务注册到哪里
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7003.com:7003/eureka/,http://eureka7003.com:7003/eureka/   #服务注册到eureka
+  instance:
+    instance-id: springcloud-provider-dept-八零零一 #修改Eureka上的默认描述信息
+# info配置
+info:
+  app.name: haust-springcloud
+  # 公司的名称
+  company.name: 梁家杰傻逼
