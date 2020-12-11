@@ -8,6 +8,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spingcloudapi" />
+        <module name="spring-config-server" />
+        <module name="SpringClient3355" />
         <module name="springcloud-eureka-7003" />
         <module name="SpringCloudconsumer" />
         <module name="springcloudeureka7001" />
@@ -19,5 +21,8 @@
         <module name="springcloudzuul9527" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="springconfigserver" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

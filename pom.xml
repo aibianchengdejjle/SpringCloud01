@@ -18,6 +18,8 @@
         <module>SpringCloud-provider-dept-8003</module>
         <module>SpringCloud-provider-dept(Hystrix)-8001</module>
         <module>springcloud-zuul-9527</module>
+        <module>spring-config-server-3344</module>
+        <module>SpringClient-3355</module>
     </modules>
 
     <properties>
@@ -42,6 +44,14 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>Greenwich.SR1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <!--<version>Finchley.RC1</version>-->
+                <version>Edgware.SR4</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -105,6 +115,11 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-feign</artifactId>
                 <version>1.4.6.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-config-server</artifactId>
+                <version>2.1.1.RELEASE</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
